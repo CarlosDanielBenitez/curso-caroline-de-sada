@@ -183,7 +183,7 @@ footer {
 }
 
 
-/* services page */
+/* services page Cursos*/
 .containerService{
   margin-top: 2rem;
   display: flex;
@@ -205,6 +205,16 @@ object-fit: cover;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
+}
+
+/* we Servicios */
+.cardService{
+  height: 100vh;
+}
+.cardService img{
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -236,7 +246,7 @@ justify-content: space-around;
       flex-direction: column;
     }
 
-    /* service */
+    /* service Cursos*/
     .cardService{
       flex-direction: column;
       align-items: center;
