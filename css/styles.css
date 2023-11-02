@@ -21,7 +21,10 @@ header {
   align-items: center;
   padding: 15px;
   width: 100%;
-  z-index: 2;
+  position: sticky;
+  top: 0; 
+  z-index: 5;
+
 }
 
 
@@ -49,6 +52,7 @@ header {
 }
 
 .menu li {
+  
   margin-right: 20px;
 }
 
@@ -66,8 +70,15 @@ a {
 a:hover {
   color: #000;
 }
+/* .menu ul li a img{
+  width: 2rem;
+  height: 2rem;
+} */
 
-
+.icono{
+  width: 30px;
+  height: 30px;
+}
 
 
 .mainTitle {
@@ -81,7 +92,7 @@ a:hover {
 
 
 .mainTitle h1 {
-  margin-top: 1rem;
+  margin-top: 5rem;
   text-shadow: 2px 2px 0 #838282b7;
 }
 
@@ -101,9 +112,10 @@ a:hover {
 .cardContainer {
   margin: 1rem 0;
   display: flex;
-  align-items: center;
   gap: 1rem;
   justify-content: center;
+  
+ 
 }
 
 .card {
@@ -111,14 +123,15 @@ a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 300px;
+ width: 300px;
   transition: transform 0.2s ease-in-out;
+
 
 }
 
 .card img {
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 200px;
 
 }
 
@@ -137,13 +150,23 @@ a:hover {
   font-weight: bold;
   color: #cea510;
 }
+.containerPrice{
+  display: flex;
+column-gap: .5rem;
+justify-content: center;
+}
+.containerPrice p:nth-child(1) {
+  color: black;
+font-size: .8rem;
+  text-decoration: line-through;
+}
 
 .description {
   color: #777;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 
 }
 
@@ -151,11 +174,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-}
-
-.containerPrice p:nth-child(1) {
-  color: black;
-  text-decoration: line-through;
 }
 
 .btn {
@@ -235,17 +253,24 @@ footer {
 /* we Servicios */
 
 .cardService img {
-
+object-position: center;
   height: 100%;
   object-fit: cover;
 }
-
 .cardServiceW {
-  height: 100vh;
+  width: 400px;
+  height: 600px;
+  
+}
+
+.cardServiceW img {
+  height: 300px;
+  width: 100%;
+  
 }
 
 .cardServiceW div {
-  height: max-content;
+   height: max-content; 
 }
 
 /* community */
@@ -255,8 +280,18 @@ footer {
 }
 
 .containerCommunity div {
+width: 300px;
+  height: 300px;
+  
+}
 
-  height: 25rem;
+.cardCommunity{
+  background-color: #fff;
+  border-radius: 10px;
+ width: auto;
+  transition: transform 0.2s ease-in-out;
+height: auto;
+
 }
 
 .thanks {
@@ -264,6 +299,12 @@ footer {
   text-shadow: 1px 2px #c2c2c2;
   padding: 2rem;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.thanks img{
+  width: 100%;
+  height: 300px;
 }
 
 @media screen and (max-width: 768px) {
@@ -308,6 +349,7 @@ footer {
 
   .cardContainer {
     flex-direction: column;
+    align-items: center;
   }
 
   /* service Cursos*/
@@ -323,16 +365,24 @@ footer {
     width: 800px;
   }
 
+  .cardServiceW div{
+    display: flex;
+    height: max-content;
+    align-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
   .row>* {
     width: auto;
   }
 
-  .cardService img {
-
-    object-position: left;
-  }
+   .cardServiceW img {
+  width: 400px; 
+  } 
 }
 
-/* @media screen and (max-width: ) {
-
-} */
+ @media screen and (max-width: 500px) {
+  .mainTitle img {
+    height: auto;
+  }
+} 

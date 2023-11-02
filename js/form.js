@@ -1,6 +1,7 @@
 
 // Función para validar el formulario
 document.getElementById('formularioContacto').addEventListener('submit', function (event) {
+    event.preventDefault();
     let valid = true;
 
     const nombre = document.getElementById('nombre').value.trim();
@@ -36,6 +37,16 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
         document.getElementById('errorTelefono').textContent = '';
     }
 
+
+    const curso = document.getElementById('curso').value;
+    if (curso === '') {
+        valid = false;
+        document.getElementById('errorCurso').textContent = 'Debes seleccionar un curso.';
+    } else {
+        document.getElementById('errorCurso').textContent = '';
+    }
+
+
     if (!valid) {
         event.preventDefault(); // Evitar el envío del formulario si hay errores
     } else {
@@ -57,6 +68,7 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
         email: document.getElementById('email').value,
         telefono: document.getElementById('telefono').value,
         mensaje: document.getElementById('mensaje').value,
+        curso: curso,
     };
 
     // Guarda los datos en el localStorage

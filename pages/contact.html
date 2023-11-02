@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Finanzas Mentoría Digital</title>
+    <title>Contacto</title>
     <link
       rel="shortcut icon"
-      href="../assets/img/bitcoin.svg"
+      href="../assets/img/education-school-icon.svg"
       type="image/x-icon"
     />
     <link
@@ -34,11 +34,13 @@
           <li><a href="./community.html">Comunidad</a></li>
         </ul>
       </nav>
+    <a  href="./contact.html"><img  class="icono" src="../assets/img/education-school-icon.svg" alt=""></a>
+
     </header>
 
     <main>
       <div class="container">
-        <h1>Formulario de Contacto</h1>
+        <h1 class="text-center">Formulario de Contacto</h1>
         <form id="formularioContacto">
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
@@ -88,12 +90,22 @@
               placeholder="Escribe tu mensaje"
             ></textarea>
           </div>
+          <div class="mb-3">
+            <label for="curso" class="form-label">Curso</label>
+            <select class="form-select" id="curso">
+                <option value="" disabled selected>Selecciona un curso</option>
+                <option value="basico">Curso Básico de Finanzas con Caroline Sada</option>
+                <option value="intermedio">Curso Intermedio de Finanzas con Caroline Sada</option>
+                <option value="avanzado">Curso Avanzado de Finanzas con Caroline Sada</option>
+            </select>
+            <div id="errorCurso" class="text-danger"></div>
+        </div>
           <button type="submit" class="btn btn-primary">Enviar</button>
           <button type="reset" class="btn btn-secondary">Reset</button>
         </form>
         <div class="thanks" id="agradecimiento" style="display: none">
-          Gracias por enviar tus datos. Hemos recibido la información
-          exitosamente.
+         <p> Gracias por enviar tus datos. Hemos recibido tu pedido exitosamente. En breve, te enviaremos la factura a tu teléfono y correo electrónico para que puedas realizar la compra a través del medio de pago que prefieras. ¡Gracias por elegirnos y esperamos que disfrutes de tu compra!</p>
+          <img src="../assets/img/education-school-icon.svg" alt="">
         </div>
       </div>
     </main>
